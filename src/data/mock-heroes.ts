@@ -1,6 +1,6 @@
 import { Hero } from '../types/hero';
 
-export const HEROES: Hero[] = [
+export const HEROES: Hero[] = [ //HEROES is the constant. We specify it's an array of Heroes. (Hero[])
     { id: 12, name: 'Dr. Nice' },
     { id: 13, name: 'Bombasto' },
     { id: 14, name: 'Celeritas' },
