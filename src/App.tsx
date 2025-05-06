@@ -11,7 +11,6 @@ export default function App() {
 
       <div className='flex-1'>
         Messages will go here!
-        <HeroesList />
       </div>
     </div>
   )
