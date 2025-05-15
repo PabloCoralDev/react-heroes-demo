@@ -54,13 +54,13 @@ export default function HeroesList() {
 
     return (
 
-      <div className='container mt-5 mx-auto'>
+      <div className='container mt-5 mx-auto p-10'>
         <h2 className="text-2xl">My Heroes</h2>
           <ul className='flex flex-col gap-2 my-3'>
             {heroes.map(hero => (
               <li key={hero.id} className='flex cursor-pointer' onClick={() => hadleSelectHero(hero.id)}>
                 <span className='bg-slate-700 text-white rounded-l p-2'>{hero.id}</span>
-                <span className='p-2 bg-slate-300 rounded-r w-1/4'>{hero.name}</span>
+                <span className='p-2 bg-slate-300 rounded-r w-full'>{hero.name}</span>
               </li>
             ) )} 
           </ul>
