@@ -7,6 +7,8 @@ import HeroesList from './components/HeroesList.tsx'
 import { RouterProvider } from 'react-router-dom'
 import Dashboard from './components/Dashboard.tsx'
 import CostList from './components/CostList.tsx'
+import HeroDetail from './components/HeroDetail.tsx'
+import { MessageProvider } from './context/MessageContext.tsx'
 
 
 const router = createBrowserRouter([
@@ -18,14 +20,16 @@ const router = createBrowserRouter([
       {index: true, element: <Navigate replace to='/dashboard' />},
       {path: '/dashboard', element: <Dashboard />},
       {path: '/heroes', element: <HeroesList />},
-      {path: '/costs', element: <CostList />}
-
+      {path: '/costs', element: <CostList />},
+      {path: '/heroes/:id', element: <HeroDetail />} //DYNAMIC ROOT!
     ]
   }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <MessageProvider>
+      <RouterProvider router={router} />
+    </MessageProvider>
   </React.StrictMode>,
 )
