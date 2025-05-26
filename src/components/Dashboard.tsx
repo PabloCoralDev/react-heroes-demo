@@ -24,6 +24,7 @@ export default function Dashboard() {
         fetched.current = true;
         
       }, [addMessage])
+      
   return (
     <div className='flex flex-col gap-3'>
         <h2 className='text-2xl'>Top Heroes</h2>
